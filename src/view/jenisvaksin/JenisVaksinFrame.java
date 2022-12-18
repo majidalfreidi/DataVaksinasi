@@ -19,6 +19,8 @@ public class JenisVaksinFrame extends JFrame {
     private JenisVaksinTableModel tableModel;
     private final JTable table;
     private final JButton buttonSimpan;
+    private final JButton buttonHapus;
+    private final JButton buttonEdit;
     
     public JenisVaksinFrame(){
             this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -27,12 +29,18 @@ public class JenisVaksinFrame extends JFrame {
             textFieldNama = new JTextField();
             textFieldNama.setBounds(15,60,350,30);
             buttonSimpan = new JButton("Simpan");
-            buttonSimpan.setBounds(15,100,100,40);
+            buttonSimpan.setBounds(15,100,80,20);
+            buttonHapus = new JButton("Hapus");
+            buttonHapus.setBounds(143,100,80,20);
+            buttonEdit = new JButton("Edit");
+            buttonEdit.setBounds(285,100,80,20);
             table = new JTable();
             JScrollPane scrollableTable = new JScrollPane(table);
             scrollableTable.setBounds(15,150,350,200);
         
             this.add(buttonSimpan);
+            this.add(buttonHapus);
+            this.add(buttonEdit);
             this.add(textFieldNama);
             this.add(labelInput);
             this.add(scrollableTable);

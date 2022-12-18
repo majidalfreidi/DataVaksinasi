@@ -36,12 +36,12 @@ public class JenisVaksinDao {
         return result; 
     }
 
-    public int update(JenisVaksin jenisMember){
+    public int update(JenisVaksin jenisVaksin){
         int result = -1;
         try(Connection connection = MySqlConnection.getInstance().getConnection()){
-            PreparedStatement statement = connection.prepareStatement("update jenis_member set nama = ? where id = ?");
-            statement.setString(1, jenisMember.getId());
-            statement.setString(2, jenisMember.getNama());
+            PreparedStatement statement = connection.prepareStatement("update jenis_vaksin set nama = ? where id = ?");
+            statement.setString(1, jenisVaksin.getId());
+            statement.setString(2, jenisVaksin.getNama());
 
             result = statement.executeUpdate();
             JOptionPane.showMessageDialog(null, "Data Berhasil Diubah!");
@@ -51,11 +51,11 @@ public class JenisVaksinDao {
         return result;
     }
 
-    public int delete(JenisVaksin jenisMember){
+    public int delete(JenisVaksin jenisVaksin){
         int result = -1;
         try(Connection connection = MySqlConnection.getInstance().getConnection()){
-            PreparedStatement statement = connection.prepareStatement("delete jenis_member where id = ?");
-            statement.setString(1, jenisMember.getId());
+            PreparedStatement statement = connection.prepareStatement("delete jenis_vaksin where id = ?");
+            statement.setString(1, jenisVaksin.getId());
 
             result = statement.executeUpdate();
             JOptionPane.showMessageDialog(null, "Data Berhasil Dihapus!");

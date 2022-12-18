@@ -41,4 +41,22 @@ public class JenisVaksinController {
         this.jenisVaksinFrame.addJenisVaksin(jenisVaksin);
         daoModule.getJenisVaksinDao().insert(jenisVaksin);
     }
+    
+    public void hapus(){
+        String nama = this.jenisVaksinFrame.getNama();
+        JenisVaksin jenisVaksin = new JenisVaksin();
+        jenisVaksin.setId(UUID.randomUUID().toString());
+        jenisVaksin.setNama(nama);
+        this.jenisVaksinFrame.addJenisVaksin(jenisVaksin);
+        daoModule.getJenisVaksinDao().delete(jenisVaksin);
+    }
+    
+    public void edit(){
+        String nama = this.jenisVaksinFrame.getNama();
+        JenisVaksin jenisVaksin = new JenisVaksin();
+        jenisVaksin.setId(UUID.randomUUID().toString());
+        jenisVaksin.setNama(nama);
+        this.jenisVaksinFrame.addJenisVaksin(jenisVaksin);
+        daoModule.getJenisVaksinDao().update(jenisVaksin);
+    }
 }

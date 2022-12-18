@@ -23,6 +23,8 @@ public class VaksinFrame extends JFrame {
     
     
     private final JButton buttonSimpan;
+    private final JButton buttonHapus;
+    private final JButton buttonEdit;
     private final JButton buttonExportPdf;
     
     private final JTable table;
@@ -54,15 +56,21 @@ public class VaksinFrame extends JFrame {
         textFieldVaksinKe.setBounds(15,240,350,30);
         
         buttonSimpan = new JButton("Simpan");
-        buttonSimpan.setBounds(15,280,100,40);
+        buttonSimpan.setBounds(15,280,80,40);
         buttonExportPdf = new JButton("Export PDF");
-        buttonExportPdf.setBounds(120, 280, 100, 40);
+        buttonExportPdf.setBounds(102, 280, 100, 40);
+        buttonHapus = new JButton("Hapus");
+        buttonHapus.setBounds(209,280,80,40);
+        buttonEdit = new JButton("Edit");
+        buttonEdit.setBounds(295,280,70,40);
         table = new JTable();
         JScrollPane scrollableTable = new JScrollPane(table);
         scrollableTable.setBounds(15,350,350,200);
     
         this.add(buttonSimpan);
         this.add(buttonExportPdf);
+        this.add(buttonHapus);
+        this.add(buttonEdit);
         this.add(textFieldNama);
         this.add(textFieldNoTelp);
         this.add(textFieldVaksinKe);
