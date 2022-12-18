@@ -17,6 +17,7 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 import java.util.List;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import model.JenisVaksin;
 
 public class JenisVaksinDao {
@@ -28,6 +29,7 @@ public class JenisVaksinDao {
             statement.setString(2, jenisVaksin.getNama());
 
             result = statement.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Data Berhasil Disimpan!");
         }catch(SQLException e){
             e.printStackTrace();
         }
@@ -42,6 +44,7 @@ public class JenisVaksinDao {
             statement.setString(2, jenisMember.getNama());
 
             result = statement.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Data Berhasil Diubah!");
         } catch (SQLException e){
             e.printStackTrace();
         }
@@ -55,6 +58,7 @@ public class JenisVaksinDao {
             statement.setString(1, jenisMember.getId());
 
             result = statement.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Data Berhasil Dihapus!");
         } catch (SQLException e){
             e.printStackTrace();
         }

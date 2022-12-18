@@ -28,7 +28,7 @@ public class VaksinButtonSimpanActionListener implements ActionListener {
         String nama = this.vaksinFrame.getNama();
         String noTelp = this.vaksinFrame.getNoTelp();
         String vaksinKe = this.vaksinFrame.getVaksinKe();
-                if (nama.isEmpty()){
+        if (nama.isEmpty()){
             this.vaksinFrame.showAlert("Nama tidak boleh kosong");
         } if (noTelp.isEmpty()){
             this.vaksinFrame.showAlert("No Telepon tidak boleh kosong");
